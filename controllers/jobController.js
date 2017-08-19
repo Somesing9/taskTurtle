@@ -47,7 +47,7 @@ exports.job_list_search = (req, res) => {
     else {
       Job.findAll({
         where: {
-          location: location,
+          location: zipcode,
           category: category
         }
       }).then((results) => {
