@@ -35,6 +35,7 @@ for (var i = 0; i < 50; i++) {
 
 var jobData = [];
 var jobCreator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var zipCodes =[44022, 44023]
 var category
 for (var i = 0; i < 50; i++) {
   jobData[i] = {
@@ -42,6 +43,7 @@ for (var i = 0; i < 50; i++) {
     description: faker.lorem.sentence(),
     duration: 5,
     UserId: jobCreator[i % 10],
+    location: zipCodes[i % 2],
     category: Math.floor(Math.random() * 5) + 1,
     createdAt: new Date(),
     updatedAt: new Date()
