@@ -9,11 +9,11 @@
       <form id="job" method="POST" action="/jobs/{{job.id}}/bids">
         <div class="form-group">
           <label for="amount">Bid</label>
-          <input class="text" name="amount" type="text" />
+          <input class="text" name="amount" type="text" required />
         </div>
         <div class="form-group">
           <label for="duration">How long will it take to complete?</label>
-          <input type="text" name="duration" class="integer" placeholder="In days..." />
+          <input type="text" name="duration" class="integer" placeholder="In days..." required />
         </div>
         <button type="submit" class="btn-submit">Submit</button>
       </form>
