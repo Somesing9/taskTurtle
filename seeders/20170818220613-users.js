@@ -9,14 +9,28 @@ var tempPassword = generateHash('test');
 
 var userData = [];
 for (var i = 0; i < 50; i++) {
-  userData[i] = {
-    firstname: faker.name.firstName(),
-    lastname: faker.name.lastName(),
-    email: 'user' + i + '@gmail.com',
-    password: tempPassword,
-    createdAt: new Date(),
-    updatedAt: new Date()
+  if (i < 25) {
+    userData[i] = {
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      email: 'user' + i + '@gmail.com',
+      password: tempPassword,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
   }
+  else {
+    userData[i] = {
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      email: 'contractor' + (i-24) + '@gmail.com',
+      password: tempPassword,
+      status: 'contractor',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
+  }
+
 }
 
 var jobData = [];
@@ -37,7 +51,7 @@ for (var i = 0; i < 50; i++) {
 module.exports = {
   up: function(queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Users', userData).then(() => {
-      return queryInterface.bulkInsert('Jobs',jobData)
+      return queryInterface.bulkInsert('Jobs', jobData)
     });
   },
 
