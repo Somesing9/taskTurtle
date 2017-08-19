@@ -8,7 +8,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Toggle Navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -28,7 +28,7 @@
               <ul class="dropdown-menu dropdown-menu-right">
                 <li><a href="/my-bids.html">My Bids</a></li>
                 <li><a href="/profile.html">My Profile</a></li>
-                <li><a href="/my-task.html">My Task</a></li>
+                <li><a href="/my-task.html">My Tasks</a></li>
               </ul>
             </li>
             {{/if}}
@@ -36,11 +36,11 @@
         </div>
         {{#if user}}
           <a href="/jobs/create">
-            <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#loginModal"> + <span>Make Task</span> </button>
+            <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#loginModal"> + <span>Make A Task</span> </button>
           </a>
         {{/if}}
         {{#unless user}}
-          <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#loginModal"> + <span>Make Task</span> </button>
+          <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#loginModal"> + <span>Make A Task</span> </button>
         {{/unless}}
       </div>
     </nav>
